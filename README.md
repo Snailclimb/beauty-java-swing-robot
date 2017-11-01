@@ -30,7 +30,7 @@ Jsoup解析Html教程 | xdemo.org
 Jsoup解析HTML实例及文档方法详解_java_脚本之家  http://www.jb51.net/article/43485.htm
 ### 2，机器人功能实现
 　　图形界面我用JAVA SWING中的JDialog做的，本来是准备用android studio 做一个界面类似微信的聊天机器人的，因为之前嫌弃AS太占内存加上不想搞安卓了就卸载了，所以后面有时间再做，原理很简单，可以很方便移植到其他项目。
-　　robot.java（机器人功能类）中有一段这样的代码.下面的API是我自己申请的，可以去图灵官网上申请创建一个属于自己的机器人。下面有申请方法。
+&nbsp; &nbsp; robot.java（机器人功能类）中有一段这样的代码.下面的API是我自己申请的，可以去图灵官网上申请创建一个属于自己的机器人。下面有申请方法。
 ```java
 		// 接入机器人，输入问题
 		String APIKEY = "401415ff3f1245e1a487a82974bb7307";
