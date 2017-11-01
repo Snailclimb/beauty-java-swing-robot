@@ -28,9 +28,9 @@ httpClient+jsoup
 Jsoup解析Html教程 | xdemo.org
   http://www.xdemo.org/jsoup-html-parse/
 Jsoup解析HTML实例及文档方法详解_java_脚本之家  http://www.jb51.net/article/43485.htm
-### 2，机器人功能实现
+### 3，机器人功能实现
 　　图形界面我用JAVA SWING中的JDialog做的，本来是准备用android studio 做一个界面类似微信的聊天机器人的，因为之前嫌弃AS太占内存加上不想搞安卓了就卸载了，所以后面有时间再做，原理很简单，可以很方便移植到其他项目。
-&nbsp; &nbsp; robot.java（机器人功能类）中有一段这样的代码.下面的API是我自己申请的，可以去图灵官网上申请创建一个属于自己的机器人。下面有申请方法。
+　　robot.java（机器人功能类）中有一段这样的代码.下面的API是我自己申请的，可以去图灵官网上申请创建一个属于自己的机器人。下面有申请方法。
 ```java
 		// 接入机器人，输入问题
 		String APIKEY = "401415ff3f1245e1a487a82974bb7307";
@@ -40,5 +40,10 @@ Jsoup解析HTML实例及文档方法详解_java_脚本之家  http://www.jb51.ne
 		HttpURLConnection connection = (HttpURLConnection) getUrl.openConnection();
 		connection.connect();
 ```
-先进入图灵官网
+先进入图灵官网，注册账号
 ![image](https://github.com/Snailclimb/BeautyJavaSwingRobot/blob/master/Images/%E5%9B%BE%E7%81%B5%E5%AE%98%E7%BD%91.png)
+创建属于自己的个性机器人后得到属于自己的API
+![image](https://github.com/Snailclimb/BeautyJavaSwingRobot/blob/master/Images/%E5%9B%BE%E7%81%B5api%E8%8E%B7%E5%8F%96.png)
+这个API不仅可以用在这里，想网页中微信公众号等平台中都适用。
+###  4，身份证查询功能实现
+这个功能没啥说的，我的代码里一共有三个类。都做了详细的说明。你只需要提前知道身份证的数字代表的有特殊含义就行了。
