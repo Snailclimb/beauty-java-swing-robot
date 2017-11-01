@@ -10,7 +10,7 @@
 ### 2，图形化界面万年历功能实现
 ### **使用工具**：
 httpClient+jsoup
-**简单介绍** ：HttpClient 是 Apache Jakarta Common 下的子项目，可以用来提供高效的、最新的、功能丰富的支持 HTTP 协议的客户端编程工具包，并且它支持 HTTP 协议最新的版本和建议。(来自360百科，维基百科没这个名词？尴尬).jsoup 是一款Java 的HTML解析器，可直接解析某个URL地址、HTML文本内容。它提供了一套非常省力的API，可通过DOM，CSS以及类似于jQuery的操作方法来取出和操作数据。(来自360百科)
+　　**简单介绍** ：HttpClient 是 Apache Jakarta Common 下的子项目，可以用来提供高效的、最新的、功能丰富的支持 HTTP 协议的客户端编程工具包，并且它支持 HTTP 协议最新的版本和建议。(来自360百科，维基百科没这个名词？尴尬).jsoup 是一款Java 的HTML解析器，可直接解析某个URL地址、HTML文本内容。它提供了一套非常省力的API，可通过DOM，CSS以及类似于jQuery的操作方法来取出和操作数据。(来自360百科)
 
 ###  **httpClient使用方法**：
 （更多请参考博客：http://blog.csdn.net/wangpeng047/article/details/19624529/或者官网httpClient:http://hc.apache.org/httpcomponents-client-5.0.x/index.html）
@@ -29,4 +29,16 @@ Jsoup解析Html教程 | xdemo.org
   http://www.xdemo.org/jsoup-html-parse/
 Jsoup解析HTML实例及文档方法详解_java_脚本之家  http://www.jb51.net/article/43485.htm
 ### 2，机器人功能实现
-图形界面我用JAVA SWING中的JDialog做的，本来是准备用android studio 做一个界面类似微信的聊天机器人的，因为之前嫌弃AS太占内存加上不想搞安卓了就卸载了，所以后面有时间再做，原理很简单，可以很方便移植到其他项目。
+　　图形界面我用JAVA SWING中的JDialog做的，本来是准备用android studio 做一个界面类似微信的聊天机器人的，因为之前嫌弃AS太占内存加上不想搞安卓了就卸载了，所以后面有时间再做，原理很简单，可以很方便移植到其他项目。
+　　robot.java（机器人功能类）中有一段这样的代码.下面的API是我自己申请的，可以去图灵官网上申请创建一个属于自己的机器人。下面有申请方法。
+```java
+		// 接入机器人，输入问题
+		String APIKEY = "401415ff3f1245e1a487a82974bb7307";
+		String INFO = URLEncoder.encode(quesiton, "utf-8");// 这里可以输入问题
+		String getURL = "http://www.tuling123.com/openapi/api?key=" + APIKEY + "&info=" + INFO;
+		URL getUrl = new URL(getURL);
+		HttpURLConnection connection = (HttpURLConnection) getUrl.openConnection();
+		connection.connect();
+```
+先进入图灵官网
+![image](https://github.com/Snailclimb/BeautyJavaSwingRobot/blob/master/Images/%E5%9B%BE%E7%81%B5%E5%AE%98%E7%BD%91.png)
