@@ -1,16 +1,16 @@
 package almanc;
 
 /**
- * @author ¿ÜË¬
- * @Description: ${TODO}(¶¨ÒåÓÃµ½µÄ±äÁ¿ºÍgetterºÍsetter·½·¨) 
+ * @author ï¿½ï¿½Ë¬
+ * @Description: ${TODO}(ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½getterï¿½ï¿½setterï¿½ï¿½ï¿½ï¿½) 
  */
 public class Almanac {
 	private String solar;
 	private String lunar;
 	private String chineseAra;
-	private String should;// ´æ·Å½ñÌìÒË×öµÄÊÂÇé
-	private String avoid;// ´æ·Å½ñÌì¼É×öµÄÊÂÇé
-	private String festival;// ´æ·Å½ÚÈÕ
+	private String should;// ï¿½ï¿½Å½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	private String avoid;// ï¿½ï¿½Å½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	private String festival;// ï¿½ï¿½Å½ï¿½ï¿½ï¿½
 
 	public String getSolar() {
 		return solar;
