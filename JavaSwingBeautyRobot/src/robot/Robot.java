@@ -19,16 +19,18 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
+
 /**
  * @author 寇爽
- * @Description: ${TODO}(聊天机器人功能类) 
+ * @Description: ${TODO}(聊天机器人功能类)
  */
 @SuppressWarnings("serial")
 public class Robot extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
+
 	/**
-	 * Create the dialog.
+	 * 图形化界面
 	 */
 	public Robot() {
 		setBounds(100, 100, 396, 258);
@@ -36,17 +38,17 @@ public class Robot extends JDialog {
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
-		{  
+		{
 			JLabel question = new JLabel("\u6211\u7684\u95EE\u9898\uFF1A");
 			question.setBounds(10, 146, 92, 15);
 			contentPanel.add(question);
 		}
-       //机器人回答
+		// 机器人回答
 		JLabel answer = new JLabel("\u673A\u5668\u4EBA\u56DE\u7B54\uFF1A");
 		answer.setBounds(10, 46, 92, 15);
 		contentPanel.add(answer);
 
-		//机器人回答内容
+		// 机器人回答内容
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(136, 30, 198, 73);
 		contentPanel.add(scrollPane);
@@ -55,15 +57,17 @@ public class Robot extends JDialog {
 		answercontent.setLineWrap(true);
 		answercontent.setEnabled(false);
 		scrollPane.setViewportView(answercontent);
-		//输入问题
+		// 输入问题
 		JTextArea enterquestion = new JTextArea();
 		enterquestion.setBounds(136, 142, 198, 24);
 		contentPanel.add(enterquestion);
-		//提交按钮
+		// 提交按钮
 		JButton submit = new JButton("\u63D0\u4EA4\u95EE\u9898");
 		submit.setBounds(115, 196, 93, 23);
 		contentPanel.add(submit);
- 
+		/**
+		 * 注册监听事件
+		 */
 		submit.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {

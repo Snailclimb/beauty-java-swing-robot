@@ -1,16 +1,21 @@
 package almanc;
 
 /**
- * @author ï¿½ï¿½Ë¬
- * @Description: ${TODO}(ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½getterï¿½ï¿½setterï¿½ï¿½ï¿½ï¿½) 
+ * TODO ÍòÄêÀúÊµÌåÀà
+ * @author ¿ÜË¬
+ * @date 2017Äê11ÔÂ18ÈÕ
+ * @version
  */
 public class Almanac {
 	private String solar;
 	private String lunar;
 	private String chineseAra;
-	private String should;// ï¿½ï¿½Å½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	private String avoid;// ï¿½ï¿½Å½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	private String festival;// ï¿½ï¿½Å½ï¿½ï¿½ï¿½
+	// ÒË×öµÄÊÂ
+	private String should;
+	// ±ÜÃâ×öµÄÊÂ
+	private String avoid;
+	// ½ÚÈÕ
+	private String festival;
 
 	public String getSolar() {
 		return solar;
@@ -60,12 +65,12 @@ public class Almanac {
 		this.festival = festival;
 	}
 
-	public Almanac(String solar, String lunar, String chineseAra, String should, String avoid,String festival) {
+	public Almanac(String solar, String lunar, String chineseAra, String should, String avoid, String festival) {
 		this.solar = solar;
 		this.lunar = lunar;
 		this.chineseAra = chineseAra;
 		this.should = should;
 		this.avoid = avoid;
-		this.festival=festival;
+		this.festival = festival;
 	}
 }
