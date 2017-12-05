@@ -53,14 +53,14 @@ public class MainFace {
 	}
 
 	/**
-	 * 修改窗口 
+	 * 修改窗口
 	 */
 	private void initialize() {
 		JDialog.setDefaultLookAndFeelDecorated(true);
 		try {
-			BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.generalNoTranslucencyShadow;  
-            org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper.launchBeautyEyeLNF(); 
-            UIManager.put("RootPane.setupButtonVisible",false);  
+			BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.generalNoTranslucencyShadow;
+			org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper.launchBeautyEyeLNF();
+			UIManager.put("RootPane.setupButtonVisible", false);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -159,26 +159,32 @@ public class MainFace {
 
 		JMenuItem robot = new JMenuItem("聊天对话机器人");
 		moreFunction.add(robot);
-		
+
 		JMenuItem IDcard = new JMenuItem("身份证信息查询");
 		moreFunction.add(IDcard);
-		// 聊天机器人
-		robot.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				try {
-					Robot dialog = new Robot();
-					dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-					dialog.setVisible(true);
-				} catch (Exception e1) {
-					e1.printStackTrace();
-				}
+		// 聊天机器人(Lambda表达式使用)
+		robot.addActionListener((e) -> {
+			try {
+				Robot dialog = new Robot();
+				dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+				dialog.setVisible(true);
+			} catch (Exception e1) {
+				e1.printStackTrace();
 			}
 		});
 
-		// 身份证信息查询
-		IDcard.addActionListener(new ActionListener() {
+		// 身份证信息查询（Lambda表达式）
+		IDcard.addActionListener((e)->{
+			try {
+				Identitycard dialog = new Identitycard();
+				dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+				dialog.setVisible(true);
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+		});
+		//老版写法
+/*		IDcard.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -191,7 +197,7 @@ public class MainFace {
 					e1.printStackTrace();
 				}
 			}
-		});
+		});*/
 
 	}
 }
