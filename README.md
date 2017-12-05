@@ -1,6 +1,6 @@
 # BeautyJavaSwingRobot
 结合BeautyEye开源UI框架实现的较美观的Java桌面程序，主要功能就是图灵机器人和一个2345网站万年历的抓取。。。。
-### 1，效果图：
+2017/12/5: 刚刚把程序里面的事件处理用Lambda表达式替换了，现在再看之前的程序，真的感觉不怎么好，虽然程序还算简介，结构自己也很清楚。但是在学完框架之后再看感觉很乱，可能这也是自己的一点成长吧。不过讲真，Lambda表达式真的给力，用最少的代码实现一样的功能，或许这是很多程序员的追求了吧！继续加油 ！！！
 ####   主要界面图
 ![image](https://github.com/Snailclimb/BeautyJavaSwingRobot/blob/master/Images/%E4%B8%BB%E8%A6%81%E7%95%8C%E9%9D%A2%E6%95%88%E6%9E%9C%E5%9B%BE.png)
 ####   机器人效果图
